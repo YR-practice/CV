@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Сертифікат — Networking Basics</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .cert-page { max-width: 1000px; margin: 0 auto; padding: 24px 20px 56px; }
+    .cert-bar { display: flex; flex-wrap: wrap; gap: 12px; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+    .cert-bar h1 { margin: 0; font-size: 1.3rem; font-weight: 600; }
+    .cert-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+    .btn {
+      display: inline-block; padding: 8px 16px; border-radius: 8px; font: inherit; font-size: .95rem; cursor: pointer;
+      border: 1px solid var(--line); background: var(--surface);
+      color: var(--ink); text-decoration: none;
+    }
+    .btn.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+    .btn:hover { filter: brightness(.95); }
+    .cert-view { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 12px; }
+    .cert-view img { display: block; width: 100%; height: auto; border-radius: 6px; }
+    .meta { margin: 16px 2px 0; color: var(--muted); }
+  </style>
+</head>
+<body data-title="certTitle">
+  <div class="cert-page">
+    <div class="cert-bar">
+      <h1 data-i18n="certH1">Networking Basics — Cisco Networking Academy</h1>
+      <div class="cert-actions">
+        <a class="btn" href="index.html#education" data-i18n="back">Назад до резюме</a>
+        <a class="btn primary" href="assets/certificate.pdf" target="_blank" rel="noopener" data-i18n="openPdf">Відкрити PDF</a>
+        <a class="btn" href="assets/certificate.pdf" download data-i18n="download">Завантажити</a>
+        <button id="lang-toggle" class="btn" type="button">English</button>
+      </div>
+    </div>
+
+    <div class="cert-view">
+      <img src="assets/certificate.png" alt="Сертифікат, виданий Єгору Рухайлу за успішне проходження курсу Networking Basics" data-i18n-alt="certViewAlt">
+    </div>
+
+    <p class="meta" data-i18n="certMeta">Курс запропонований коледжем КАІ ТЕХ для проходження дисципліни «Організація комп’ютерних мереж». Дата завершення: 22 листопада 2025. Викладач: Володимир Заболотний.</p>
+  </div>
+
+  <script src="i18n.js"></script>
+</body>
+</html>

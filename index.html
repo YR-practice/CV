@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Єгор Рухайло — резюме</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-title="pageTitle">
+  <div class="page">
+    <button id="lang-toggle" class="lang" type="button">English</button>
+
+    <header class="head">
+      <img class="photo" src="assets/photo.jpg" alt="Фото Єгора Рухайла" data-i18n-alt="photoAlt" width="140" height="175">
+      <div>
+        <h1 data-i18n="name">Єгор Рухайло</h1>
+        <p class="line" data-i18n="birth">Дата народження: 26 липня 2008 року</p>
+        <p class="line">
+          <span data-i18n="mail">Пошта:</span>
+          <a href="mailto:yehor.rukhailo@kitu.nau.edu.ua">yehor.rukhailo@kitu.nau.edu.ua</a>
+          <button class="copy" type="button" data-copy="yehor.rukhailo@kitu.nau.edu.ua" data-i18n="copy">Копіювати</button>
+        </p>
+      </div>
+    </header>
+
+    <main>
+      <section id="about">
+        <h2 data-i18n="aboutH">Про мене</h2>
+        <p data-i18n="aboutP">Студент 4 курсу коледжу КАІ ТЕХ, спеціальність «Кібербезпека». Цікавлюся кібербезпекою, програмуванням і комп’ютерними мережами та хочу створити власну домашню лабораторію для практики.</p>
+      </section>
+
+      <section id="skills">
+        <h2 data-i18n="skillsH">Навички</h2>
+        <p><strong data-i18n="skProg">Програмування:</strong></p>
+        <ul class="chips">
+          <li>HTML</li><li>CSS</li><li>JS</li><li>C#</li><li>C++</li><li>MS SQL Server</li>
+        </ul>
+        <p><strong data-i18n="skNet">Мережі:</strong></p>
+        <ul class="chips">
+          <li>DHCP</li><li>IP</li><li>VPN</li><li>DNS</li><li>MikroTik</li><li>RouterOS v6</li>
+        </ul>
+        <p><strong data-i18n="skApps">Програми:</strong></p>
+        <ul class="chips">
+          <li>MS Office</li><li>LibreOffice</li><li>Visual Studio</li><li>Visual Studio Code</li><li>VirtualBox</li>
+        </ul>
+      </section>
+
+      <section id="code">
+        <h2 data-i18n="codeH">Приклад коду</h2>
+        <p data-i18n="codeP">Проста функція на JavaScript: перевіряє, чи число може бути частиною IP-адреси (від 0 до 255).</p>
+        <figure class="code">
+<pre><code id="snippet">function isOctet(n) {
+  return n >= 0 &amp;&amp; n <= 255;
+}
+
+console.log(isOctet(192)); // true
+console.log(isOctet(300)); // false</code></pre>
+        </figure>
+        <div class="try">
+          <label for="num" data-i18n="tryLabel">Спробуйте число:</label>
+          <input id="num" type="number" value="192">
+          <output id="result" for="num" aria-live="polite"></output>
+        </div>
+      </section>
+
+      <section id="education">
+        <h2 data-i18n="eduH">Освіта</h2>
+        <ul class="list">
+          <li>
+            <strong data-i18n="college">КАІ ТЕХ</strong> <span class="date" data-i18n="collegeDate">2023 — зараз</span>
+            <p data-i18n="collegeP">Коледж. Спеціальність: кібербезпека, 4 курс.</p>
+          </li>
+          <li>
+            <strong data-i18n="school">СЗШ № 258</strong> <span class="date" data-i18n="schoolDate">2014 — 2023</span>
+            <p data-i18n="schoolP">Школа.</p>
+          </li>
+        </ul>
+
+        <p><strong data-i18n="coursesH">Курси:</strong></p>
+        <a class="cert" href="certificate.html">
+          <img src="assets/certificate.png" alt="Сертифікат Cisco Networking Academy «Networking Basics»" data-i18n-alt="certAlt" width="220" loading="lazy">
+          <span>
+            <span data-i18n="certText">Основи мереж (Cisco Networking Academy), 22 листопада 2025</span><br>
+            <span class="cert-link" data-i18n="certLink">Переглянути сертифікат</span>
+          </span>
+        </a>
+      </section>
+
+      <section id="languages">
+        <h2 data-i18n="langsH">Мови</h2>
+        <ul class="list">
+          <li data-i18n="uaLang">Українська — рідна</li>
+          <li data-i18n="enLang">Англійська — A2</li>
+        </ul>
+      </section>
+
+      <section id="projects">
+        <h2 data-i18n="projH">Проєкти</h2>
+        <ul class="list">
+          <li>
+            <a href="https://yr-login.github.io/Login-form/" target="_blank" rel="noopener" data-i18n="proj1">Форма входу</a>
+            <p data-i18n="proj1P">Веб-сторінка з формою входу на HTML, CSS і JavaScript.</p>
+          </li>
+          <li>
+            <a href="index.html" data-i18n="proj2">Це резюме</a>
+            <p data-i18n="proj2P">Сторінка на HTML, CSS і JavaScript.</p>
+          </li>
+        </ul>
+      </section>
+    </main>
+  </div>
+
+  <script src="i18n.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
